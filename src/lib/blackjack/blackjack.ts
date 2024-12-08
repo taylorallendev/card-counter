@@ -1,4 +1,4 @@
-import { Card, GameState, GameStatus } from './types';
+import { GameState } from './types';
 import { createDeck, calculateScore } from '../utils';
 
 export class BlackjackEngine {

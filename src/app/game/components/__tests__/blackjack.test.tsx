@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
-import { BlackjackGame } from '../blackjack-game'
+import { BlackjackGame } from '../blackjack'
 import { useToast } from '@/lib/hooks/use-toast'
 
 // Mock the toast hook

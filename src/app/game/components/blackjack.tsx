@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { Card as CardComponent } from '../card';
 import { BlackjackEngine } from '@/lib/blackjack/blackjack';
 import { RefreshCw, Plus, HandIcon as HandStop, Trophy, XCircle } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { useToast } from '@/lib/hooks/use-toast';
 import { Card as UICard, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/app/_components/ui/card";
 import { Button } from '@/app/_components/ui/button';
@@ -76,7 +75,7 @@ export function BlackjackGame() {
     }
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 h-full">
             <div className="mb-8 flex justify-between">
                 <Button
                     onClick={startNewGame}

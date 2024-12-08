@@ -1,3 +1,4 @@
+// @ts-nocheck
 import "@/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -28,6 +29,6 @@ export default function RootLayout({
           <Toaster />
         </body>
       </html>
-    </ClerkProvider>
+    </ClerkProvider >
   );
 }

@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { auth } from "@/server/auth";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/app/_components/ui/card";
 import { Button } from "./_components/ui/button";
 import { Trophy, PlayCircle } from "lucide-react";
+import { auth } from '@clerk/nextjs/server'
 
 export default async function Home() {
-  const session = await auth();
+  const { userId } = await auth();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-background text-white">
@@ -28,7 +28,7 @@ export default async function Home() {
             </p>
           </CardContent>
           <CardFooter className="flex justify-center pb-6">
-            {session?.user ? (
+            {userId ? (
               <Link href="/game">
                 <Button className="bg-gray-800 hover:bg-gray-700 text-white">
                   <PlayCircle className="mr-2 h-5 w-5" />
@@ -45,6 +45,6 @@ export default async function Home() {
           </CardFooter>
         </Card>
       </div>
-    </main >
+    </main>
   );
 }
